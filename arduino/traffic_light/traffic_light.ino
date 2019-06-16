@@ -1,6 +1,6 @@
-int led_red = 4;
+int led_red = 2;
 int led_yellow = 3;
-int led_green = 2;
+int led_green = 4;
 
 void setup() {
   pinMode(led_red, OUTPUT);
