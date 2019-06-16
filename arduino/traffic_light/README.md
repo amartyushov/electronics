@@ -5,3 +5,5 @@ Notes. R1=R2=R3=220.
 ![How to assemble the parts](maket_schema.jpg)
 
 ![The principal electronic schema](principal_schema.jpg)
+
+![Real view of the project](traffic-light.gif)
