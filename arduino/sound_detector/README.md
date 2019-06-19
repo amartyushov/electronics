@@ -11,4 +11,4 @@ Jumper wires
 ![Visual](visual-schema.png)
 
 
-![Source of tutorial](https://randomnerdtutorials.com/guide-for-microphone-sound-sensor-with-arduino)
+Source of tutorial: https://randomnerdtutorials.com/guide-for-microphone-sound-sensor-with-arduino/
