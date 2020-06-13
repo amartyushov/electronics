@@ -1,32 +1,24 @@
-#include <Servo.h>
-
-Servo myservo;  // create servo object to control a servo
-// twelve servo objects can be created on most boards
-
-//int position = 0;    // variable to store the servo positionition
+int ledPin = 13;
+int sensorPin = 7;
+boolean currentSensorValue = 0;
 
 void setup() {
-  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+  pinMode(ledPin, OUTPUT);
+  pinMode(sensorPin, INPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
-  fromToDegreesClockwise(0, 180);
-  fromToDegreesContrClockwise(180, 0);
-}
+  currentSensorValue = digitalRead(sensorPin);
+  Serial.println(currentSensorValue);
 
-
-void fromToDegreesClockwise(int from, int to) {
-  for (int position = from; position <= to; position += 1) {
-    // in steps of 1 degree
-    myservo.write(position);              // tell servo to go to positionition in variable 'position'
-    delay(15);                       // waits 15ms for the servo to reach the positionition
+  if (currentSensorValue == HIGH) {
+    digitalWrite(ledPin, HIGH);
+    delay(2000);
+  } else {
+    digitalWrite(ledPin, LOW);
   }
-}
 
-void fromToDegreesContrClockwise(int from, int to) {
-  for (int position = from; position >= to; position -= 1) {
-    // in steps of 1 degree
-    myservo.write(position);              // tell servo to go to positionition in variable 'position'
-    delay(15);                       // waits 15ms for the servo to reach the positionition
-  }
+
+
 }

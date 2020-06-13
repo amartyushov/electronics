@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../ultrasonic_sonar"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
